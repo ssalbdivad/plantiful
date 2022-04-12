@@ -1,62 +1,53 @@
 import * as React from "react"
 import AppBar from "@mui/material/AppBar"
-import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
-import Button from "@mui/material/Button"
-import { Stack } from "@mui/material"
+import { Stack, IconButton } from "@mui/material"
+import { Twitter, YouTube, Home } from "@mui/icons-material"
+
+type NavBarTextLinkProps = {
+    text: string
+}
+
+const NavBarTextLink = ({ text }: NavBarTextLinkProps) => (
+    <Typography variant="h4" sx={{ fontFamily: "League Gothic" }}>
+        {text}
+    </Typography>
+)
+
+type NavBarIconLinkProps = {
+    children: JSX.Element
+}
+
+const NavBarIconLink = ({ children }: NavBarIconLinkProps) => (
+    <IconButton sx={{ color: "white" }}>{children}</IconButton>
+)
 
 export const NavBar = () => {
     return (
         <AppBar sx={{ backgroundColor: "rgba(0,0,0,.7)" }} position="static">
             <Toolbar sx={{ justifyContent: "space-between" }}>
                 <Stack direction="row" spacing={2}>
-                    <Typography
-                        variant="h4"
-                        component="div"
-                        sx={{
-                            fontFamily: "Grape Nuts"
-                        }}
-                    >
-                        Home
-                    </Typography>
-                    <Typography
-                        variant="h4"
-                        component="div"
-                        sx={{
-                            fontFamily: "Grape Nuts"
-                        }}
-                    >
-                        Blog
-                    </Typography>
-                    <Typography
-                        variant="h4"
-                        component="div"
-                        sx={{
-                            fontFamily: "Grape Nuts"
-                        }}
-                    >
-                        About
-                    </Typography>
+                    <NavBarTextLink text="Home" />
+                    <NavBarTextLink text="Blog" />
+                    <NavBarTextLink text="About" />
                 </Stack>
                 <Typography
                     variant="h3"
-                    component="div"
                     sx={{
                         fontFamily: "Grape Nuts"
                     }}
                 >
                     Plantiful
                 </Typography>
-                <Typography
-                    variant="h3"
-                    component="div"
-                    sx={{
-                        fontFamily: "Grape Nuts"
-                    }}
-                >
-                    On Social
-                </Typography>
+                <Stack direction="row" spacing={2}>
+                    <NavBarIconLink>
+                        <Twitter />
+                    </NavBarIconLink>
+                    <NavBarIconLink>
+                        <YouTube />
+                    </NavBarIconLink>
+                </Stack>
             </Toolbar>
         </AppBar>
     )
