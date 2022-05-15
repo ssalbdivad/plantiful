@@ -14,7 +14,7 @@ export const MobileNavDrawer = () => {
             <Stack spacing={2}>
                 <Links.HomeLink />
                 <Links.BlogLink />
-                <Links.AboutLink />
+                <Links.StoryLink />
                 <Stack spacing={2} direction="row">
                     <Links.TwitterLink />
                     <Links.YouTubeLink />

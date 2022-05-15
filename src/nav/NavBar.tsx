@@ -1,4 +1,3 @@
-import React from "react"
 import { AppBar, Toolbar, Typography, Stack } from "@mui/material"
 import { MobileNavDrawer } from "./MobileNavDrawer.js"
 import { isMobile } from "../utils.js"
@@ -14,7 +13,7 @@ export const NavBar = () => {
                     <Stack direction="row" spacing={2}>
                         <Links.HomeLink />
                         <Links.BlogLink />
-                        <Links.AboutLink />
+                        <Links.StoryLink />
                     </Stack>
                 )}
 
