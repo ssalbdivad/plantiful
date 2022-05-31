@@ -8,6 +8,7 @@ import {
     Stack
 } from "@mui/material"
 import { PostMetadata } from "../blog/index.js"
+import { Tags } from "./components/tags.js"
 
 export type ActionAreaCardProps = {
     metadata: PostMetadata
@@ -34,18 +35,9 @@ export const PostCard = ({ metadata, large }: ActionAreaCardProps) => {
                             {metadata.title}
                         </Typography>
                         <Typography variant="body2" sx={{ color: "white" }}>
-                            {metadata.caption}
+                            {metadata.subtitle}
                         </Typography>
-                        <Stack direction="row" spacing={1}>
-                            {metadata.tags.map((tag) => (
-                                <Chip
-                                    key={tag}
-                                    color="success"
-                                    size="small"
-                                    label={`#${tag}`}
-                                />
-                            ))}
-                        </Stack>
+                        <Tags>{metadata.tags}</Tags>
                     </Stack>
                 </CardContent>
             </CardActionArea>

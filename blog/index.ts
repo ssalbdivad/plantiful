@@ -1,6 +1,7 @@
-import { MDXContent } from "mdx/types"
 import * as alfredo from "./alfredo/post.mdx"
 import * as cake from "./cake/post.mdx"
+import { Post } from "./types.js"
+export * from "./types.js"
 
 export const posts = [alfredo, cake] as Post[]
 
@@ -14,17 +15,3 @@ posts.sort(
         new Date(postOne.metadata.date).getTime() -
         new Date(postTwo.metadata.date).getTime()
 ) as Post[]
-
-export type Post = {
-    default: MDXContent
-    metadata: PostMetadata
-}
-
-export type PostMetadata = {
-    title: string
-    id: string
-    caption: string
-    image: string
-    date: string
-    tags: string[]
-}
