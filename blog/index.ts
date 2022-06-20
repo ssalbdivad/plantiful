@@ -1,9 +1,10 @@
 import * as alfredo from "./alfredo/post.mdx"
 import * as cake from "./cake/post.mdx"
+import * as scones from "./scones/post.mdx"
 import { Post } from "./types.js"
 export * from "./types.js"
 
-export const posts = [alfredo, cake] as Post[]
+export const posts = [alfredo, cake, scones] as Post[]
 
 posts.forEach(
     (post) =>
