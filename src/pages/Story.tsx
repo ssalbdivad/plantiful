@@ -1,7 +1,8 @@
-import { Page } from "./Page.jsx"
+import { ContentPage } from "./templates/ContentPage.js"
+import StoryContent from "../../story.mdx"
 
 export const Story = () => (
-    <Page>
-        <h1>About me</h1>
-    </Page>
+    <ContentPage>
+        <StoryContent />
+    </ContentPage>
 )

@@ -3,20 +3,22 @@ import { MobileNavDrawer } from "./MobileNavDrawer.js"
 import { isMobile } from "../utils.js"
 import * as Links from "./Links.js"
 
+const f = 5
 export const NavBar = () => {
     return (
         <AppBar sx={{ backgroundColor: "rgba(0,0,0,.7)" }} position="static">
             <Toolbar sx={{ justifyContent: "space-between" }}>
                 {isMobile() ? (
-                    <MobileNavDrawer />
+                    <div style={{ width: 50 }}>
+                        <MobileNavDrawer />
+                    </div>
                 ) : (
-                    <Stack direction="row" spacing={2}>
+                    <Stack direction="row" spacing={2} width={300}>
                         <Links.HomeLink />
                         <Links.BlogLink />
                         <Links.StoryLink />
                     </Stack>
                 )}
-
                 <Typography
                     variant="h3"
                     sx={{
@@ -26,11 +28,16 @@ export const NavBar = () => {
                     Plantiful
                 </Typography>
                 {isMobile() ? (
-                    <div></div>
+                    <div style={{ width: 50 }}></div>
                 ) : (
-                    <Stack direction="row" spacing={2}>
-                        <Links.TwitterLink />
-                        <Links.YouTubeLink />
+                    <Stack
+                        direction="row"
+                        spacing={2}
+                        width={300}
+                        justifyContent="right"
+                    >
+                        {/* <Links.TwitterLink />
+                            <Links.YouTubeLink /> */}
                     </Stack>
                 )}
             </Toolbar>

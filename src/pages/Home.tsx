@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material"
-import { PostCard } from "../PostCard.jsx"
+import { PostCard } from "../components/PostCard.js"
 import { posts } from "../../blog"
-import { Page } from "./Page.jsx"
+import { Page } from "./templates/Page.js"
 
 export const Home = () => (
     <Page>
@@ -14,15 +14,6 @@ export const Home = () => (
         >
             <Grid item xs={12}>
                 <PostCard metadata={posts[0].metadata} large />
-            </Grid>
-            <Grid item xs={6} md={4}>
-                <PostCard metadata={posts[1].metadata} />
-            </Grid>
-            <Grid item xs={6} md={4}>
-                <PostCard metadata={posts[1].metadata} />
-            </Grid>
-            <Grid item xs={6} md={4}>
-                <PostCard metadata={posts[1].metadata} />
             </Grid>
         </Grid>
     </Page>

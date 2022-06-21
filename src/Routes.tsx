@@ -1,5 +1,6 @@
 import { Route, Routes as ReactRoutes } from "react-router-dom"
-import { Blog, Home, Story, Post } from "./pages"
+import { Blog, Home, Story } from "./pages"
+import { Post } from "./pages/Post"
 
 export const Routes = () => (
     <ReactRoutes>
