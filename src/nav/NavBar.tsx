@@ -15,7 +15,7 @@ export const NavBar = () => {
                 ) : (
                     <Stack direction="row" spacing={2} width={300}>
                         <Links.HomeLink />
-                        <Links.BlogLink />
+                        {/* <Links.BlogLink /> */}
                         <Links.StoryLink />
                     </Stack>
                 )}

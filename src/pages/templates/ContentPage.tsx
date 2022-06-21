@@ -3,12 +3,13 @@ import { ReactNode } from "react"
 import { Page } from "./Page.js"
 
 export type ContentPageProps = {
+    background?: string
     children: ReactNode
 }
 
-export const ContentPage = ({ children }: ContentPageProps) => {
+export const ContentPage = ({ children, background }: ContentPageProps) => {
     return (
-        <Page background="linear-gradient(135deg, rgb(150, 200, 120) 0%, rgb(255, 255, 255) 100%)">
+        <Page {...(background ? { background } : undefined)}>
             <Container maxWidth="md" sx={{ paddingY: "1em" }}>
                 <Card
                     elevation={24}

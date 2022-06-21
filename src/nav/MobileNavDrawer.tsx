@@ -13,12 +13,12 @@ export const MobileNavDrawer = () => {
         >
             <Stack spacing={2}>
                 <Links.HomeLink />
-                <Links.BlogLink />
+                {/* <Links.BlogLink /> */}
                 <Links.StoryLink />
-                <Stack spacing={2} direction="row">
+                {/* <Stack spacing={2} direction="row">
                     <Links.TwitterLink />
                     <Links.YouTubeLink />
-                </Stack>
+                </Stack> */}
             </Stack>
         </Box>
     )

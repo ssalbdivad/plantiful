@@ -8,7 +8,7 @@ export const Post = () => {
     const { postId } = useParams()
     const RequestedPost = posts.find((post) => post.metadata.id === postId)
     return RequestedPost ? (
-        <ContentPage>
+        <ContentPage background="linear-gradient(135deg, rgb(150, 200, 120) 0%, rgb(255, 255, 255) 100%)">
             <Box sx={{ marginBottom: "1em" }}>
                 <Typography variant="h1" fontSize="2.5em">
                     {RequestedPost.metadata.title}
