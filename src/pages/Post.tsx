@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material"
+import { Box, Grid, Stack, Typography } from "@mui/material"
 import { useParams, Navigate } from "react-router-dom"
 import { posts } from "../../blog"
 import { Tags } from "../components/tags.js"
@@ -8,17 +8,15 @@ export const Post = () => {
     const { postId } = useParams()
     const RequestedPost = posts.find((post) => post.metadata.id === postId)
     return RequestedPost ? (
-        <ContentPage background="linear-gradient(135deg, rgb(150, 200, 120) 0%, rgb(255, 255, 255) 100%)">
-            <Box sx={{ marginBottom: "1em" }}>
+        <ContentPage>
+            <Box sx={{ marginBottom: "2em" }}>
                 <Typography variant="h1" fontSize="2.5em">
                     {RequestedPost.metadata.title}
                 </Typography>
-                <Stack direction="row" justifyContent="space-between">
-                    <Typography variant="h2" color="GrayText" fontSize="1.4em">
-                        {RequestedPost.metadata.subtitle}
-                    </Typography>
-                    <Tags>{RequestedPost.metadata.tags}</Tags>
-                </Stack>
+                <Typography variant="h2" color="GrayText" fontSize="1.4em">
+                    {RequestedPost.metadata.subtitle}
+                </Typography>
+                <Tags>{RequestedPost.metadata.tags}</Tags>
                 <img
                     src={RequestedPost.metadata.image}
                     style={{
