@@ -1,8 +1,9 @@
 import * as scones from "./scones/post.mdx"
+import * as bananaBread from "./bananaBread/post.mdx"
 import { Post } from "./types.js"
 export * from "./types.js"
 
-export const posts = [scones] as Post[]
+export const posts = [scones, bananaBread] as Post[]
 
 posts.forEach(
     (post) =>
@@ -11,6 +12,6 @@ posts.forEach(
 
 posts.sort(
     (postOne, postTwo) =>
-        new Date(postOne.metadata.date).getTime() -
-        new Date(postTwo.metadata.date).getTime()
+        new Date(postTwo.metadata.date).getTime() -
+        new Date(postOne.metadata.date).getTime()
 ) as Post[]

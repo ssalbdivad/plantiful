@@ -1,6 +1,6 @@
 import * as React from "react"
 import { IconButton, Box, Drawer, Stack } from "@mui/material"
-import { Menu } from "@mui/icons-material"
+import Menu from "@mui/icons-material/Menu"
 import * as Links from "./Links.js"
 
 export const MobileNavDrawer = () => {

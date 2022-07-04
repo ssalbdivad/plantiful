@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { IconButton, Typography } from "@mui/material"
-import { Twitter, YouTube, Home } from "@mui/icons-material"
+// import { Twitter, YouTube, Home } from "@mui/icons-material"
 
 type NavBarTextLinkProps = {
     text: string
@@ -26,17 +26,17 @@ export const NavBarIconLink = ({ children }: NavBarIconLinkProps) => (
     <IconButton sx={{ color: "white" }}>{children}</IconButton>
 )
 
-export const TwitterLink = () => (
-    <NavBarIconLink>
-        <Twitter />
-    </NavBarIconLink>
-)
+// export const TwitterLink = () => (
+//     <NavBarIconLink>
+//         <Twitter />
+//     </NavBarIconLink>
+// )
 
-export const YouTubeLink = () => (
-    <NavBarIconLink>
-        <YouTube />
-    </NavBarIconLink>
-)
+// export const YouTubeLink = () => (
+//     <NavBarIconLink>
+//         <YouTube />
+//     </NavBarIconLink>
+// )
 
 export const HomeLink = () => <NavBarTextLink text="Home" route="/" />
 export const BlogLink = () => <NavBarTextLink text="Blog" route="/blog" />
