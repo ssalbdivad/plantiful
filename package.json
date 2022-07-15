@@ -5,7 +5,9 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build && echo plantifulcooking.com > docs/CNAME",
+        "build": "tsc && vite build && cp docs/index.html docs/404.html && echo plantifulcooking.com > docs/CNAME",
+        "upload": "git add . && git commit -m 'Add content.' && git push",
+        "release": "pnpm build && pnpm upload",
         "preview": "vite preview"
     },
     "dependencies": {

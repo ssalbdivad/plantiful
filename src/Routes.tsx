@@ -5,11 +5,11 @@ import { Post } from "./pages/Post"
 export const Routes = () => (
     <ReactRoutes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog">
+        <Route path="blog">
             <Route index element={<Blog />} />
-            <Route path="/blog/:postId" element={<Post />} />
+            <Route path=":postId" element={<Post />} />
         </Route>
-        <Route path="/story" element={<Story />} />
+        <Route path="story" element={<Story />} />
         <Route path="*" element={<Home />} />
     </ReactRoutes>
 )
