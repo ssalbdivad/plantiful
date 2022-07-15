@@ -21,7 +21,7 @@ export const Post = () => {
                     src={RequestedPost.metadata.image}
                     style={{
                         paddingTop: "1em",
-                        maxHeight: "20em",
+                        maxHeight: "394px",
                         width: "100%",
                         objectFit: "cover",
                         marginBottom: "-.5em"
