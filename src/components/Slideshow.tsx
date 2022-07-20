@@ -1,15 +1,23 @@
 import Carousel from "react-material-ui-carousel"
-import { Paper, Button, Box } from "@mui/material"
 import { photos } from "../../blog/index.js"
 
 export const ImageSlideshow = () => {
     return (
-        <Box style={{ height: 400 }}>
+        <div style={{ marginLeft: -32 }}>
             <Carousel>
                 {photos.map((photo, i) => (
-                    <img key={i} style={{ height: 400 }} src={photo} />
+                    <div
+                        key={i}
+                        style={{
+                            height: 400,
+                            background: `url(${photo})`,
+                            backgroundSize: "cover",
+                            backgroundRepeat: "no-repeat",
+                            backgroundPosition: "center"
+                        }}
+                    />
                 ))}
             </Carousel>
-        </Box>
+        </div>
     )
 }
