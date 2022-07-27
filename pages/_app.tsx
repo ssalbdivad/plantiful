@@ -1,6 +1,16 @@
-import { AppProps } from 'next/app'
-import '../styles/index.css'
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const client = new ApolloClient({
+  cache: new InMemoryCache(),
+  uri: "/api",
+});
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <ApolloProvider client={client}>
+      <Component {...pageProps} />
+    </ApolloProvider>
+  );
 }
+
+export default MyApp;
